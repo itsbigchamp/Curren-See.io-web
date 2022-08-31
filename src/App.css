@@ -1,3 +1,9 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+*, 
+* ::before,
+* ::after
+
 .App {
   text-align: center;
 }
