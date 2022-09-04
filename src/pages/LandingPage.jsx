@@ -1,10 +1,11 @@
 import CreateStrategyForm from "../components/CreateStrategyForm";
 import CurrencyPairList from "../components/CurrencypairList";
 import { useState } from "react";
+import { StrategyContext } from "../context/StrategyContext";
 
 // get the price pairs
 function LandingPage() {
-  const [strategy, setStrategy] = useState([])
+  
   return (
     <>
     <CurrencyPairList />

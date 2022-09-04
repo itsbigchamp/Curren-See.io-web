@@ -6,7 +6,7 @@ function CurrencyPairCard({ currencypair }) {
   
   return (
     <Card>
-      <Card.Body>
+      <Card.Body style={{height: '300px'}} className="d-flex flex-column align-items-center">
         <Card.Title>{currencypair.id}</Card.Title>
         <Card.Text>{currencypair.countries}</Card.Text>
         <Card.Text>{currencypair.type}</Card.Text>
