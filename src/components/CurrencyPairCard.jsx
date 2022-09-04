@@ -1,8 +1,9 @@
-import CurrencyPairSelector from "./CurrencypairSelector";
 import Card from "react-bootstrap/Card";
 import { useState } from "react";
+// import { Button } from "react";
 
 function CurrencyPairCard({ currencypair }) {
+  
   return (
     <Card>
       <Card.Body>
@@ -10,7 +11,7 @@ function CurrencyPairCard({ currencypair }) {
         <Card.Text>{currencypair.countries}</Card.Text>
         <Card.Text>{currencypair.type}</Card.Text>
         <Card.Text>{currencypair.volatility}</Card.Text>
-        <CurrencyPairSelector />
+        
       </Card.Body>
     </Card>
   );

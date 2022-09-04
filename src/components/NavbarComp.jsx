@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
+import { Navbar } from "react-bootstrap/";
 import { Nav } from "react-bootstrap/";
 import Login from "./Login";
 
 
-function Navbar() {
+function NavbarComp() {
   return (
+    <Navbar bg="light">
         <Nav activeKey="/Landing">
           <Nav.Item>
             <Nav.Link as={Link} to="/">
@@ -25,7 +27,8 @@ function Navbar() {
             <Login />
           </Nav.Item>
         </Nav>
+        </Navbar>
   );
 }
 
-export default Navbar;
+export default NavbarComp;
