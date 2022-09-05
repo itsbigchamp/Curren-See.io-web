@@ -10,5 +10,5 @@ export const StrategyContextProvider = ({ children }) => {
     strategy,
     setStrategy,
   };
-  return <Provider value={value}>{ children }</Provider>;
+  return <Provider value={value}>{children}</Provider>;
 };

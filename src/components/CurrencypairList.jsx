@@ -8,30 +8,26 @@ import { StrategyContext } from "../context/StrategyContext";
 function CurrencyPairList() {
   const { strategy, setStrategy } = useContext(StrategyContext);
   const [currencyPairs, setCurrencyPairs] = useState([]);
-  const [selectedPair, setSelectedPair] = useState();
   const handleSelectedPair = (currencypair) => {
+    setStrategy([...strategy, currencypair]);
     console.log(currencypair);
-
-    // setSelectedPair(currencypair);
-    setStrategy([...strategy, currencypair])
   };
-
-  // useEffect(() => {
-  //   setStrategy({...strategy, selectedPair })
-  // },[selectedPair])
-
-  // console.log({ selectedPair });
-  console.log({ strategy })
+  console.log({ strategy });
 
   useEffect(() => {
-    fetch("http://currensee-io-api.web.app/currencyPairs")
+    fetch("https://currensee-io-api.web.app/currencyPairs")
       .then((results) => results.json())
       .then((data) => setCurrencyPairs(data))
       .catch(console.error);
   }, []);
 
   return (
-    <Carousel className="container" variant="dark" slide={false} interval={null}>
+    <Carousel
+      className="container"
+      variant="dark"
+      slide={false}
+      interval={null}
+    >
       {currencyPairs.map((currencypair, index) => (
         <Carousel.Item key={index}>
           <CurrencyPairCard currencypair={currencypair} />
@@ -39,7 +35,8 @@ function CurrencyPairList() {
           <Carousel.Caption>
             <Button
               variant="secondary"
-              onClick={(e) => handleSelectedPair(currencypair)}>
+              onClick={(e) => handleSelectedPair(currencypair)}
+            >
               Select CurrencyPair
             </Button>
           </Carousel.Caption>
