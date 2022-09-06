@@ -2,9 +2,10 @@ import { useContext } from "react";
 import { Button } from "react-bootstrap";
 import { StrategyContext } from "../context/StrategyContext";
 import { Card } from "react-bootstrap";
-//get for the strategy
-function CreateStrategyForm({ setCurrencyPairs }) {
-  const { strategy, setStrategy } = useContext(StrategyContext);
+import "./CreateStrategyForm.css"
+
+function CreateStrategyForm() {
+  const { strategy } = useContext(StrategyContext);
 
   const handleCreateStrategy = () => {
     console.log(strategy);
@@ -18,8 +19,6 @@ function CreateStrategyForm({ setCurrencyPairs }) {
     })
       .then((results) => results.json())
       .then((data) => {
-        // setStrategy(data);
-        // setCurrencyPairs();
         console.log(data);
       })
       .catch(console.error);
@@ -31,9 +30,7 @@ function CreateStrategyForm({ setCurrencyPairs }) {
         {strategy.map((currencypair, index) => (
           <Card key={index}>
             <Card.Body
-              style={{ height: "20px" }}
-              className="d-flex justify-content-space-between flex-row align-items-center"
-            >
+              className="d-flex">
               <Card.Title>{currencypair.id}</Card.Title>
               <Card.Text>{currencypair.countries}</Card.Text>
               <Card.Text>{currencypair.type}</Card.Text>
@@ -41,15 +38,16 @@ function CreateStrategyForm({ setCurrencyPairs }) {
             </Card.Body>
           </Card>
         ))}
-        ;
       </div>
+      <br />
       <Button
-        variant="dark-outline"
+        variant="outline-light"
         onClick={(e) => handleCreateStrategy(strategy)}
       >
         Create Strategy
       </Button>{" "}
     </div>
+    
   );
 }
 

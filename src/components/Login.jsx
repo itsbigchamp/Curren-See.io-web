@@ -1,6 +1,7 @@
 import { Button } from "react-bootstrap";
 import { Form, Modal } from "react-bootstrap";
 import { useState } from "react";
+import "./Login.css"
 
 function Login() {
   const [show, setShow] = useState(false);

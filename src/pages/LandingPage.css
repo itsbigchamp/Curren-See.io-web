@@ -2,15 +2,11 @@
 *,
 *::before,
 *::after{
-    margin:0;
+    margin: 0;
     padding: 0;
     box-sizing: inherit;
 }
-
-.strategy-item{
-    border-radius: 10px;
-    border: 2px solid lightgray;
-    margin: 2px;
-    size: 200px ;
+.cp-text{
     font-family: Michroma;
+    color: ghostwhite;
 }

@@ -3,6 +3,7 @@ import Carousel from "react-bootstrap/Carousel";
 import { Button } from "react-bootstrap";
 import { useContext, useEffect, useState } from "react";
 import { StrategyContext } from "../context/StrategyContext";
+import "./CurrencyPairList.css"
 // get the price pairs
 
 function CurrencyPairList() {
@@ -22,27 +23,30 @@ function CurrencyPairList() {
   }, []);
 
   return (
+    <div className="carousel-background"> 
+
     <Carousel
       className="container"
-      variant="dark"
+      variant="light"
       slide={false}
       interval={null}
-    >
+      >
       {currencyPairs.map((currencypair, index) => (
         <Carousel.Item key={index}>
           <CurrencyPairCard currencypair={currencypair} />
 
           <Carousel.Caption>
             <Button
-              variant="secondary"
+              variant="outline-light"
               onClick={(e) => handleSelectedPair(currencypair)}
-            >
+              >
               Select CurrencyPair
             </Button>
           </Carousel.Caption>
         </Carousel.Item>
       ))}
     </Carousel>
+      </div>
   );
 }
 

@@ -1,18 +1,23 @@
 import Card from "react-bootstrap/Card";
-import { useState } from "react";
+import "./CurrencyPairCard.css";
 // import { Button } from "react";
 
 function CurrencyPairCard({ currencypair }) {
   return (
     <Card>
       <Card.Body
-        style={{ height: "300px" }}
+        style={{ height: "400px", backgroundColor: "black" }}
         className="d-flex flex-column align-items-center"
       >
-        <Card.Title>{currencypair.id}</Card.Title>
-        <Card.Text>{currencypair.countries}</Card.Text>
-        <Card.Text>{currencypair.type}</Card.Text>
-        <Card.Text>{currencypair.volatility}</Card.Text>
+        <div className="cp-container">
+          <Card.Title>{currencypair.id}</Card.Title>
+          <br />
+          <Card.Text>{currencypair.countries}</Card.Text>
+          <br />
+          <Card.Text>{currencypair.type}</Card.Text>
+          <br />
+          <Card.Text>{currencypair.volatility}</Card.Text>
+        </div>
       </Card.Body>
     </Card>
   );
