@@ -1,9 +1,9 @@
 import { Button } from "react-bootstrap";
 import { Form, Modal } from "react-bootstrap";
 import { useState } from "react";
-import "./Login.css"
+import "./SignUp.css"
 
-function Login() {
+function SignUp (){
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -11,12 +11,12 @@ function Login() {
   return (
     <>
       <Button variant="outline-secondary" onClick={handleShow}>
-        Login
+        SignUp
       </Button>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Login</Modal.Title>
+          <Modal.Title>SignUp</Modal.Title>
         </Modal.Header>
         <Form>
           <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -35,7 +35,7 @@ function Login() {
             <Form.Check type="checkbox" label="Check me out" />
           </Form.Group>
           <Modal.Footer>
-            <Button variant="outline-secondary" type="submit">
+            <Button variant="outline-sencondary" type="submit">
               Submit
             </Button>
           </Modal.Footer>
@@ -45,4 +45,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default SignUp;

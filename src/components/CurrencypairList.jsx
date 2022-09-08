@@ -37,10 +37,11 @@ function CurrencyPairList() {
 
           <Carousel.Caption>
             <Button
+              className="cp-btn"
               variant="outline-light"
               onClick={(e) => handleSelectedPair(currencypair)}
               >
-              Select CurrencyPair
+              Select Currency Pair
             </Button>
           </Carousel.Caption>
         </Carousel.Item>

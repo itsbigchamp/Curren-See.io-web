@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Button } from "react-bootstrap";
 import { StrategyContext } from "../context/StrategyContext";
 import { Card } from "react-bootstrap";
-import "./CreateStrategyForm.css"
+import "./CreateStrategyForm.css";
 
 function CreateStrategyForm() {
   const { strategy } = useContext(StrategyContext);
@@ -29,8 +29,7 @@ function CreateStrategyForm() {
       <div>
         {strategy.map((currencypair, index) => (
           <Card key={index}>
-            <Card.Body
-              className="d-flex">
+            <Card.Body className="d-flex">
               <Card.Title>{currencypair.id}</Card.Title>
               <Card.Text>{currencypair.countries}</Card.Text>
               <Card.Text>{currencypair.type}</Card.Text>
@@ -40,14 +39,15 @@ function CreateStrategyForm() {
         ))}
       </div>
       <br />
-      <Button
-        variant="outline-light"
-        onClick={(e) => handleCreateStrategy(strategy)}
-      >
-        Create Strategy
-      </Button>{" "}
+      <div className="create-btn">
+        <Button
+          variant="outline-light"
+          onClick={(e) => handleCreateStrategy(strategy)}
+        >
+          Create Strategy
+        </Button>{" "}
+      </div>
     </div>
-    
   );
 }
 

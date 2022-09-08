@@ -1,12 +1,12 @@
+import "./App.css";
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavbarComp from "./components/NavbarComp";
 import LandingPage from "./pages/LandingPage";
 import ProfilePage from "./pages/ProfilePage";
 import CommunityPage from "./pages/CommunityPage";
 import Footer from "./components/Footer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { StrategyContextProvider } from "./context/StrategyContext";
-import "./App.css";
 
 function App() {
   return (

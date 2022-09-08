@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import { Navbar } from "react-bootstrap/";
+import { Navbar, NavItem } from "react-bootstrap/";
 import { Nav } from "react-bootstrap/";
 import Login from "./Login";
+import SignUp from "./SignUp";
 import "./NavbarComp.css";
 
 function NavbarComp() {
@@ -24,12 +25,20 @@ function NavbarComp() {
               Community
             </Nav.Link>
           </Nav.Item>
-          <Nav.Item>
-            <Login />
-          </Nav.Item>
+          <div>
+            <Nav.Item>
+              <Login />
+            </Nav.Item>
+          </div>
+          <div>{' '}</div>
+          <div>
+            <Nav.Item>
+              <SignUp />
+            </Nav.Item>
+          </div>
         </Nav>
-    </div>
-      </Navbar>
+      </div>
+    </Navbar>
   );
 }
 

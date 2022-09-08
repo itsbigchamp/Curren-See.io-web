@@ -4,9 +4,9 @@ import "./CurrencyPairCard.css";
 
 function CurrencyPairCard({ currencypair }) {
   return (
-    <Card>
+    <Card className="card-container">
       <Card.Body
-        style={{ height: "400px", backgroundColor: "black" }}
+        style={{ height: "400px", backgroundColor: "#222"}}
         className="d-flex flex-column align-items-center"
       >
         <div className="cp-container">
